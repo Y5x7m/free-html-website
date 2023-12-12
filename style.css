@@ -75,6 +75,8 @@ button{
     background: transparent;
     color: #fff;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 .center{
     background-color: #009688;
@@ -95,10 +97,23 @@ button{
     }
 }
 
-
-
-
-
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
 
 
 
